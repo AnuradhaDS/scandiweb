@@ -1,0 +1,111 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn-add-product, .btn-delete, .btn-cancel {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-cancel {
+    background-color: #f44336;
+}
+
+.btn-delete {
+    background-color: #f44336;
+    margin-left: 10px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Tiles Container */
+.tiles-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-tile {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+.product-tile input.delete-checkbox {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.product-sku, .product-name, .product-price, .product-attribute {
+    margin: 10px 0;
+}
+
+/* Form Styles for Add Product Page */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#dvd-fields, #book-fields, #furniture-fields {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .tiles-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-tile {
+        width: 100%;
+    }
+}
